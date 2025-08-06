@@ -190,10 +190,7 @@
 }
 
 
-'.amplop-container {
-  /* ... existing styles ... */
-  z-index: 1000;
-}
+
 
 .amplop-open {
   z-index: 1001;
