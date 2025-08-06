@@ -79,10 +79,6 @@ body {
   100% { transform: translateY(0px); }
 }
 
-.amplop-container {
-  animation: float 3s ease-in-out infinite;
-}
-
 .fullscreen-bg {
   position: fixed;
   top: 0;
@@ -142,14 +138,6 @@ body {
   position: relative;
 }
 
-.amplop-container {
-  position: sticky;
-  top: 50%;
-  transform: translateY(-50%);
-  flex: 1;
-  max-width: 400px;
-  z-index: 100;
-}
 
 .cards-wrapper {
   flex: 2;
