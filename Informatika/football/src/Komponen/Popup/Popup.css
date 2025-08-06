@@ -1,0 +1,145 @@
+/* Modern Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.popup-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  overflow: hidden;
+  transform: translateY(0);
+  animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.popup-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.popup-title {
+  margin: 0 0 20px 0;
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.popup-input {
+  padding: 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.popup-input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.popup-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.submit-button {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modern letter controls (kept from original but enhanced) */
+.letter-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.letter-controls button {
+  flex: 1;
+  padding: 12px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.letter-controls button:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .popup-container {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .popup-content {
+    padding: 20px;
+  }
+  
+  .letter-controls {
+    flex-direction: column;
+  }
+}
